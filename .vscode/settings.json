@@ -1,0 +1,9 @@
+//Configuracoes do Code Runner. Aqui determinados os comandos de cada linguagem para que o coderunner execute o arquivo em outras linguagens.
+{
+  "window.zoomLevel": 0
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "python": "python -u",
+    "typescript": "clear && npx ts-node --files --transpile-only",
+  }
+}
