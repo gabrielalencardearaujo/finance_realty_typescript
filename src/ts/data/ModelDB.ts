@@ -1,10 +1,11 @@
-import { writeFile, readFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { readFileSync } from 'node:fs';
 import ConvertData from './ConvertData';
 
 export default class ModelDB implements ModelDBProtocol {
   private path = resolve();
-  public database: string = '';
+  public database: string = 'nao fui alterado';
 
   escreverArquivo(arr: InterfaceFinanciamento[]): boolean {
     try {
@@ -19,12 +20,16 @@ export default class ModelDB implements ModelDBProtocol {
   }
 
   async lerArquivo() {
-    const filePath = `${this.path}/database/data.json`;
     try {
-      return await readFile(filePath, { encoding: 'utf-8' });
-    } catch (err) {
-      console.error(err);
+      const conteudo = readFileSync(`${this.path}/database/data.json`, 'utf8');
+      this.database = JSON.parse(conteudo);
+      return JSON.parse(conteudo);
+    } catch (e) {
+      console.log(e);
     }
   }
 }
 
+const db = new ModelDB();
+db.lerArquivo();
+console.log(db.database);
