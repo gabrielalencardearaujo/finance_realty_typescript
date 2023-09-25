@@ -1,0 +1,12 @@
+[
+  {
+    "_valorImovel": 10000,
+    "_prazoFinanciamentoAnual": 10,
+    "_taxaJurosAnual": 10,
+    "_valorTotalPagamento": 8973.333333333332,
+    "_prazoFinanciamentoMensal": 120,
+    "_pagamentoMensal": 74.77777777777777,
+    "_areaConstruida": 100,
+    "_areaTerreno": 200
+  }
+]

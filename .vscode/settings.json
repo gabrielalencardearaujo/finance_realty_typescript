@@ -4,6 +4,6 @@
   "code-runner.executorMap": {
     "javascript": "node",
     "python": "python -u",
-    "typescript": "clear && npx ts-node --files --transpile-only",
+    "typescript": "npx ts-node --files --transpile-only",
   }
 }
